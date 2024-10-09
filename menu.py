@@ -5,10 +5,14 @@ def menu():
     # navigation menu
     st.sidebar.page_link("multipage_app.py", label="Home",icon='🏠')
     st.sidebar.divider()
-    st.sidebar.write('**RD Assistant/GenBI Tools**')
+    st.sidebar.write('**RD Assistant Tools**')
     st.sidebar.page_link("pages/1_text_to_sql.py", label="Data Querying Assistant",icon='📃')
     st.sidebar.page_link("pages/text_summarisationeasyJet.py", label="PDF Q&A",icon='❔')
     st.sidebar.page_link("pages/client_talking_points.py", label="Client Talking Points",icon='💬')
+
+    st.sidebar.write('**GenBI Tools**')
+    st.sidebar.page_link("pages/text-to-sql-tech.py", label="Data Querying Assistant (SQL Output)",icon='📃')
+
     # st.sidebar.page_link("pages/csv_helper.py", label="CSV Data Analyst",icon='💹')
     # st.sidebar.page_link("pages/rag_llm.py", label="Documents Search/Q&A",icon='🔍')
     # st.sidebar.divider()
