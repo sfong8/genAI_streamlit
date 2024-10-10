@@ -196,38 +196,7 @@ This query complies with Athena syntax and follows the important notes you provi
 - It respects column types (e.g., using quotes for string values)
 - It converts relevant columns to lowercase for case-insensitive matching""",
         'results': './results/844526a2-dbb7-4dc1-abdc-6f7ac063ce8f.csv',
-        'query_questions': {
-            'Generate me some insights into the income by product and client': """Based on this data, I can provide several insights into the income by product and client:
-
-1. Top Earning Clients and Products:
-   - Company abc1's BACS product is the highest income generator overall, with £732,332.
-   - Company def1's Cash product is the second-highest, earning £668,281.
-   - EasyJet plc's top products are Cash and Overdraft, both earning over £400,000.
-
-2. Client-specific insights:
-   - Company abc1: Relies heavily on BACS, which generates significantly more income than its other products.
-   - Company def1: Has a more balanced product mix, with Cash, Current Accounts, and BACS all generating substantial income.
-   - Company def2: Also has a relatively balanced mix, with Cash, BACS, and Cheques as top earners.
-   - Company def3: Overdraft is by far their biggest income generator, followed by BACS and Cash.
-   - EasyJet plc: Has four main products (Cash, Overdraft, BACS, and Cheques) all generating significant income.
-
-3. Product-specific insights:
-   - BACS is a strong performer across multiple clients, appearing in the top 3 for several companies.
-   - Cash is also a consistently high earner across different clients.
-   - Overdraft services generate significant income for some clients (especially EasyJet and company def3) but not for others.
-   - FPS (Faster Payments Service) is only a significant income source for company def2.
-
-4. Diversity of income sources:
-   - Some clients like company abc1 and company def3 have a more concentrated income source (BACS and Overdraft respectively).
-   - Others like company def1, company def2, and EasyJet plc have more diversified income across multiple products.
-
-5. Potential areas for growth:
-   - Clients with lower income from certain products might have room for growth. For example, company abc1 could potentially increase its income from Current Accounts or FPS.
-
-To gain more detailed insights, especially regarding trends over time, we would need to analyze the data by summary_month as well. This would allow us to see if there are any seasonal patterns or growth trends for specific products or clients.""",
-            'which client had a decrease in total income in the latest month?': """The clients that had a decrease in total income in the latest month (June 2024) compared to the previous month (May 2024) were company def1, company def2, and company def3.""",
-
-            'Can you identify significant trends in the monthly income by product and client': """
+        'query_questions': { 'Can you identify significant trends in the monthly income by product and client': """
     Given the information we have, here are some significant trends in the monthly income by product and client:
 
 1. Client-specific trends:
@@ -257,7 +226,36 @@ To gain more detailed insights, especially regarding trends over time, we would 
    - Current Accounts and FPS, while present for most clients, contribute less to the overall monthly income.
 
 To gain more detailed insights into specific trends over time, month-to-month changes, or to identify any clear upward or downward trends, we would need to visualize the time series data or perform more advanced time series analysis.
-    """
+    """,
+            'Generate me some insights into the income by product and client': """Based on this data, I can provide several insights into the income by product and client:
+
+1. Top Earning Clients and Products:
+   - Company abc1's BACS product is the highest income generator overall, with £732,332.
+   - Company def1's Cash product is the second-highest, earning £668,281.
+   - EasyJet plc's top products are Cash and Overdraft, both earning over £400,000.
+
+2. Client-specific insights:
+   - Company abc1: Relies heavily on BACS, which generates significantly more income than its other products.
+   - Company def1: Has a more balanced product mix, with Cash, Current Accounts, and BACS all generating substantial income.
+   - Company def2: Also has a relatively balanced mix, with Cash, BACS, and Cheques as top earners.
+   - Company def3: Overdraft is by far their biggest income generator, followed by BACS and Cash.
+   - EasyJet plc: Has four main products (Cash, Overdraft, BACS, and Cheques) all generating significant income.
+
+3. Product-specific insights:
+   - BACS is a strong performer across multiple clients, appearing in the top 3 for several companies.
+   - Cash is also a consistently high earner across different clients.
+   - Overdraft services generate significant income for some clients (especially EasyJet and company def3) but not for others.
+   - FPS (Faster Payments Service) is only a significant income source for company def2.
+
+4. Diversity of income sources:
+   - Some clients like company abc1 and company def3 have a more concentrated income source (BACS and Overdraft respectively).
+   - Others like company def1, company def2, and EasyJet plc have more diversified income across multiple products.
+
+5. Potential areas for growth:
+   - Clients with lower income from certain products might have room for growth. For example, company abc1 could potentially increase its income from Current Accounts or FPS.
+
+To gain more detailed insights, especially regarding trends over time, we would need to analyze the data by summary_month as well. This would allow us to see if there are any seasonal patterns or growth trends for specific products or clients.""",
+            'which client had a decrease in total income in the latest month?': """The clients that had a decrease in total income in the latest month (June 2024) compared to the previous month (May 2024) were company def1, company def2, and company def3."""
         }
     }
 }
