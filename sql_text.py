@@ -59,12 +59,11 @@ This query complies with Athena syntax and follows the important notes you provi
 1. Client-specific trends:
    - Company abc1 shows the highest income for BACS products, with an average of 61,027 per month. This is significantly higher than other clients for the same product.
    - Company def1 has the highest income for Cash products, averaging 55,690 per month.
-   - Easyjet plc shows consistently high income across multiple products, particularly in Cash and Overdraft categories.
 
 2. Product-specific trends:
    - BACS and Cash products generally show higher monthly incomes across most clients.
    - Current Accounts and FPS products tend to have lower monthly incomes for all clients.
-   - Overdraft products show high variability between clients, with company abc1 and easyjet plc having much higher averages than others.
+   - Overdraft products show high variability between clients, with company abc1 having much higher averages than others.
 
 3. Variability in income:
    - Company def3's Overdraft product shows the highest variability (standard deviation of 1008.77), indicating significant fluctuations in monthly income.
@@ -76,7 +75,6 @@ This query complies with Athena syntax and follows the important notes you provi
 
 5. Client portfolio differences:
    - Different clients seem to have varying strengths in different products. For instance, while company abc1 excels in BACS, company def1 shows strength in Cash products.
-   - Easyjet plc appears to have a more balanced portfolio with relatively high incomes across multiple products.
 
 6. Product importance:
    - BACS, Cash, and Overdraft products seem to be the most significant income generators across clients.
@@ -84,30 +82,28 @@ This query complies with Athena syntax and follows the important notes you provi
 
 To gain more detailed insights into specific trends over time, month-to-month changes, or to identify any clear upward or downward trends, we would need to visualize the time series data or perform more advanced time series analysis.
     """
-            , "plot a heatmap of the total income by client and product": 'total_income_heatmap_archived.png'
+            , "Plot a heatmap of the total income by client and product": 'total_income_heatmap_archived.png'
             , 'Generate me some insights into the income by product and client': """Based on this data, I can provide several insights into the income by product and client:
 
 1. Top Earning Clients and Products:
    - Company abc1's BACS product is the highest income generator overall, with £732,332.
    - Company def1's Cash product is the second-highest, earning £668,281.
-   - EasyJet plc's top products are Cash and Overdraft, both earning over £400,000.
 
 2. Client-specific insights:
    - Company abc1: Relies heavily on BACS, which generates significantly more income than its other products.
    - Company def1: Has a more balanced product mix, with Cash, Current Accounts, and BACS all generating substantial income.
    - Company def2: Also has a relatively balanced mix, with Cash, BACS, and Cheques as top earners.
    - Company def3: Overdraft is by far their biggest income generator, followed by BACS and Cash.
-   - EasyJet plc: Has four main products (Cash, Overdraft, BACS, and Cheques) all generating significant income.
 
 3. Product-specific insights:
    - BACS is a strong performer across multiple clients, appearing in the top 3 for several companies.
    - Cash is also a consistently high earner across different clients.
-   - Overdraft services generate significant income for some clients (especially EasyJet and company def3) but not for others.
+   - Overdraft services generate significant income for some clients (especially company def3) but not for others.
    - FPS (Faster Payments Service) is only a significant income source for company def2.
 
 4. Diversity of income sources:
    - Some clients like company abc1 and company def3 have a more concentrated income source (BACS and Overdraft respectively).
-   - Others like company def1, company def2, and EasyJet plc have more diversified income across multiple products.
+   - Others like company def1 and company def2 have more diversified income across multiple products.
 
 5. Potential areas for growth:
    - Clients with lower income from certain products might have room for growth. For example, company abc1 could potentially increase its income from Current Accounts or FPS.
@@ -236,24 +232,22 @@ This query complies with Athena syntax and follows the important notes you provi
 1. Top Earning Clients and Products:
    - Company abc1's BACS product is the highest income generator overall, with £732,332.
    - Company def1's Cash product is the second-highest, earning £668,281.
-   - EasyJet plc's top products are Cash and Overdraft, both earning over £400,000.
 
 2. Client-specific insights:
    - Company abc1: Relies heavily on BACS, which generates significantly more income than its other products.
    - Company def1: Has a more balanced product mix, with Cash, Current Accounts, and BACS all generating substantial income.
    - Company def2: Also has a relatively balanced mix, with Cash, BACS, and Cheques as top earners.
    - Company def3: Overdraft is by far their biggest income generator, followed by BACS and Cash.
-   - EasyJet plc: Has four main products (Cash, Overdraft, BACS, and Cheques) all generating significant income.
 
 3. Product-specific insights:
    - BACS is a strong performer across multiple clients, appearing in the top 3 for several companies.
    - Cash is also a consistently high earner across different clients.
-   - Overdraft services generate significant income for some clients (especially EasyJet and company def3) but not for others.
+   - Overdraft services generate significant income for some clients (especially company def3) but not for others.
    - FPS (Faster Payments Service) is only a significant income source for company def2.
 
 4. Diversity of income sources:
    - Some clients like company abc1 and company def3 have a more concentrated income source (BACS and Overdraft respectively).
-   - Others like company def1, company def2, and EasyJet plc have more diversified income across multiple products.
+   - Others like company def1 and company def2 have more diversified income across multiple products.
 
 5. Potential areas for growth:
    - Clients with lower income from certain products might have room for growth. For example, company abc1 could potentially increase its income from Current Accounts or FPS.
