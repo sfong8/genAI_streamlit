@@ -109,7 +109,7 @@ To gain more detailed insights into specific trends over time, month-to-month ch
    - Clients with lower income from certain products might have room for growth. For example, company abc1 could potentially increase its income from Current Accounts or FPS.
 
 To gain more detailed insights, especially regarding trends over time, we would need to analyze the data by summary_month as well. This would allow us to see if there are any seasonal patterns or growth trends for specific products or clients.""",
-            "plot a heatmap of the total income by client and product": 'total_income_heatmap_archived.png',
+            "Plot a heatmap of the total income by client and product": 'total_income_heatmap_archived.png',
 
             'which client had a decrease in total income in the latest month?': """The clients that had a decrease in total income in the latest month (June 2024) compared to the previous month (May 2024) were company def1, company def2, and company def3."""
 
