@@ -1,11 +1,12 @@
 defined_prompts = {
     'show me monthly income and month on month percentage difference by client name and product for RD John Smith': {
         'sql_query': """
-with monthly_income as (SELECT lower(ci.client_name) as client_name,
+WITH monthly_income as (SELECT lower(ci.client_name) as client_name,
                                pi.product_level2,
                                date_trunc('month', pi.summary_date) as month,
                                sum(pi.income) as monthly_income
-                        FROM   client_product.client_info ci join client_product.product_income pi
+                        FROM   client_product.client_info ci 
+                        JOIN client_product.product_income pi
                                 ON ci.client_id = pi.client_id
                         WHERE  lower(ci.rd_name) like lower('%john smith%')
                         GROUP BY lower(ci.client_name), pi.product_level2, date_trunc('month', pi.summary_date)
@@ -14,7 +15,7 @@ income_with_previous as (SELECT client_name,
                               product_level2,
                               month,
                               monthly_income,
-                              lag(monthly_income) OVER (PARTITION BY client_name,
+                              LAG(monthly_income) OVER (PARTITION BY client_name,
                                                                      product_level2
                                                         ORDER BY month) as previous_month_income
                        FROM   monthly_income
@@ -23,9 +24,9 @@ SELECT client_name,
        product_level2,
        month,
        monthly_income,
-       case when previous_month_income is not null and
-                 previous_month_income != 0 then ((monthly_income - previous_month_income) / previous_month_income) * 100
-            else null end as month_on_month_percentage_difference
+       CASE WHEN previous_month_income is not null AND
+                 previous_month_income != 0 THEN ((monthly_income - previous_month_income) / previous_month_income) * 100
+            ELSE null end as month_on_month_percentage_difference
 FROM   income_with_previous
 ORDER BY client_name, product_level2, month
 """,
