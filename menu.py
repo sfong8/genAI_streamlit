@@ -11,7 +11,7 @@ def menu():
     st.sidebar.page_link("pages/client_talking_points.py", label="Client Report",icon='💬')
 
     st.sidebar.write('**GenBI Tools**')
-    st.sidebar.page_link("pages/text-to-sql-tech.py", label="Data Query Assistant (SQL Output)",icon='📃')
+    st.sidebar.page_link("pages/text-to-sql-demo.py", label="Data Query Assistant (SQL Output)",icon='📃')
 
     # st.sidebar.page_link("pages/csv_helper.py", label="CSV Data Analyst",icon='💹')
     # st.sidebar.page_link("pages/rag_llm.py", label="Documents Search/Q&A",icon='🔍')

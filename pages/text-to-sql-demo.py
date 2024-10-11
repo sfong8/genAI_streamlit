@@ -56,9 +56,10 @@ st.markdown(
 )
 
 with st.chat_message("user"):
-    initial_options = ['show me monthly income and month on month percentage difference by client name and product for RD John Smith',
-                       "show me the total monthly income and balance by parent company",
-    "show me monthly income by client name and product for RD John Smith"
+    initial_options = ["I would like to see the total monthly income and balance by parent company",
+                       'I would like to see the monthly income and month on month percentage difference by client name and product for RD John Smith'
+
+    # "show me monthly income by client name and product for RD John Smith"
                        ]
     init_prompt = st.selectbox(
         'You might want to try these prompts...',
