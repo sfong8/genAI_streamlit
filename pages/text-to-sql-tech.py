@@ -8,7 +8,7 @@ import numpy as np
 from sql_text import defined_prompts
 
 try:
-    st.set_page_config(layout="wide")
+    st.set_page_config(layout="wide",initial_sidebar_state='collapsed')
     menu()
 except:
     menu()
@@ -56,9 +56,9 @@ st.markdown(
 )
 
 with st.chat_message("user"):
-    initial_options = ['show me monthly income and month on month percentage difference by client name and product level for RD John Smith',
+    initial_options = ['show me monthly income and month on month percentage difference by client name and product for RD John Smith',
                        "show me the total monthly income and balance by parent company",
-    "show me monthly income by client name and product level for RD John Smith"
+    "show me monthly income by client name and product for RD John Smith"
                        ]
     init_prompt = st.selectbox(
         'You might want to try these prompts...',

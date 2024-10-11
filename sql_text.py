@@ -1,5 +1,5 @@
 defined_prompts = {
-    'show me monthly income and month on month percentage difference by client name and product level for RD John Smith': {
+    'show me monthly income and month on month percentage difference by client name and product for RD John Smith': {
         'sql_query': """
 with monthly_income as (SELECT lower(ci.client_name) as client_name,
                                pi.product_level2,
@@ -186,7 +186,7 @@ ORDER BY
 
     ,
 
-    'show me monthly income by client name and product level for RD John Smith': {
+    'show me monthly income by client name and product for RD John Smith': {
         'sql_query': """
 WITH client_rd AS (
     SELECT client_id, client_name
