@@ -141,7 +141,7 @@ ORDER BY month""",
         'explanation': """ This query does the following:\n\n1. First, we create a CTE called `parent_clients` to get all the client IDs associated with the parent company "parent company abc". We use LOWER() function and LIKE operator for case-insensitive partial matching.\n\n2. Then, we create another CTE called `monthly_data` where we:\n   - Join the `product_income` table with the `parent_clients` CTE to filter only the relevant clients.\n   - Left join with the `product_balance` table to include balance information.\n   - Group the data by month using DATE_TRUNC function.\n   - Sum up the income and balance for each month.\n\n3. In the main query, we select from the `monthly_data` CTE, casting the month to DATE type for better readability.\n\n4. Finally, we order the results by month.\n\nThis query complies with Athena syntax and follows the important notes you provided:\n- It uses CAST for date comparisons.\n- It doesn\'t use aliases in the GROUP BY clause.\n- It respects column types (e.g., using quotes for string values).\n- It uses LOWER() for case-insensitive string comparisons.""",
         'results': './results/f85a54ac-fd08-4f94-ba7c-e3c042e0881b.csv',
         'query_questions': {
-            'plot a heatmap of the date with the monthly income': 'monthly_income_heatmap_archiveTotal.png'
+            'Plot a heatmap of the date with the monthly income': 'monthly_income_heatmap_archiveTotal.png'
         }
 
     },
@@ -177,7 +177,7 @@ ORDER BY
         'explanation': """This query does the following:\n\n1. We use a CTE (Common Table Expression) named `monthly_data` to join the three tables and perform the initial aggregation.\n\n2. We join `client_info` with `product_income` using `client_id`, and then join with `product_balance` using `account_id` and `summary_date`.\n\n3. We group by `parent_name` and `summary_date` to get monthly totals for each parent company.\n\n4. In the main query, we select from the CTE, casting the `summary_date` to DATE type for better readability.\n\n5. We order the results by `parent_name` and `month` for a clear presentation.\n\nThis query complies with Athena syntax and follows the important notes:\n- It doesn't use aliases in the GROUP BY clause.\n- It casts the `summary_date` to DATE in the final SELECT statement.\n- It includes all required columns in the CTE.\n- It doesn't use any string comparisons that would require special handling.""",
         'results': './results/f5f63e25-5249-44d7-b594-cbf5f9eb70a6.csv',
         'query_questions': {
-            'plot the total income by parent company': 'total_income_by_parent_company_archived1.png'
+            'Plot the total income by parent company': 'total_income_by_parent_company_archived1.png'
         }
     }
 
