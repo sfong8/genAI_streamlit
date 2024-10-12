@@ -129,6 +129,7 @@ monthly_data AS (
     JOIN parent_clients pc ON pi.client_id = pc.client_id
     LEFT JOIN client_product.product_balance pb 
         ON pi.account_id = pb.account_id 
+        AND pi.product_id = pb.product_id
         AND pi.summary_date = pb.summary_date
     GROUP BY DATE_TRUNC('month', pi.summary_date)
         )
