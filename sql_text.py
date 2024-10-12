@@ -160,6 +160,7 @@ WITH monthly_data AS (
             ON ci.client_id = pi.client_id
     JOIN client_product.product_balance pb 
             ON pi.account_id = pb.account_id 
+            AND pi.product_id = pb.product_id
             AND pi.summary_date = pb.summary_date
     GROUP BY 
         ci.parent_name,
