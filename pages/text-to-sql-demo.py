@@ -103,11 +103,11 @@ with st.chat_message("user"):
             st.markdown('##### Explanation:')
             st.text(explanation)
             with st.spinner('Fetching Results'):
-                with st.expander("Result:", expanded=True):
-                    st.markdown('##### Result:')
-                    st.dataframe(result)
-                    # st.download_button(label="Download data as CSV",data= result  ,file_name="query_results.csv", mime="text/csv")
-                    st.session_state.result = result
+
+                st.markdown('##### Result:')
+                st.dataframe(result)
+                # st.download_button(label="Download data as CSV",data= result  ,file_name="query_results.csv", mime="text/csv")
+                st.session_state.result = result
                 init_prompt2 = st.selectbox(
                     'You might want to try these prompts...',
                     query_results_options
