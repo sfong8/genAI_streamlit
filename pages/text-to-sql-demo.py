@@ -103,8 +103,8 @@ with st.chat_message("user"):
             st.markdown('##### Explanation:')
             st.text(explanation)
             with st.spinner('Fetching Results'):
-                with st.expander("Returned Result:", expanded=True):
-                    st.markdown('##### Returned Result:')
+                with st.expander("Result:", expanded=True):
+                    st.markdown('##### Result:')
                     st.dataframe(result)
                     # st.download_button(label="Download data as CSV",data= result  ,file_name="query_results.csv", mime="text/csv")
                     st.session_state.result = result
@@ -113,7 +113,7 @@ with st.chat_message("user"):
                     query_results_options
                 )
                 with st.form("my_form2"):
-                    st.text_input('Query returned result', init_prompt2, key='dataframe_query')
+                    st.text_input('Query Result', init_prompt2, key='dataframe_query')
                     submitted2 = st.form_submit_button("Submit")
 
                 # result.to_csv('test_result2.csv',index=None)
