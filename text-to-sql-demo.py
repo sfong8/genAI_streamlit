@@ -35,8 +35,6 @@ def click_button_reverse():
 import os
 
 
-def get_image_file():
-
 st.title("Text to SQL - Query data using Natural Language")
 st.markdown(
     """This demo illustrates converting user's query (in natural language) to SQL code
